@@ -1,0 +1,3 @@
+a = input("Enter here: ")
+if a == '\027[A':
+    print('up')
