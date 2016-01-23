@@ -51,7 +51,7 @@ def digits_count(number):
     return counter
 
 
-def is_number_balansed(n):
+def is_number_balanced(n):
     mid = digits_count(n) // 2
 
     first_half = 0
