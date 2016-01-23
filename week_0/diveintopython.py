@@ -1,5 +1,3 @@
-from firstday import palindrome
-
 # 1. A number is called balanced, if we take the middle
 # of it and the sums of the left and right parts are equal.
 
@@ -11,6 +9,7 @@ from firstday import palindrome
 # A number with only one digit is always balanced!
 
 # Implement a function is_number_balanced(n) that checks if n is balanced.
+
 
 def to_digits(number):
     result = []
@@ -26,6 +25,19 @@ def to_digits(number):
         number = number // 10
 
     return result
+
+    
+def palindrome(n):
+    reversed_string = ""
+
+    for i in range(0, len(str(n))):
+        reversed_string = str(n)[i] + reversed_string
+
+    if reversed_string == str(n):
+        return True
+
+    return False
+
 
 def digits_count(number):
     counter = 0
