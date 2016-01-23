@@ -1,4 +1,3 @@
-from firstday import to_digits
 from firstday import palindrome
 
 # 1. A number is called balanced, if we take the middle
@@ -13,6 +12,20 @@ from firstday import palindrome
 
 # Implement a function is_number_balanced(n) that checks if n is balanced.
 
+def to_digits(number):
+    result = []
+
+    if number < 0:
+        number *= -1
+
+    while (number > 0):
+        digit = number % 10
+
+        result = [digit] + result
+
+        number = number // 10
+
+    return result
 
 def digits_count(number):
     counter = 0
